@@ -343,9 +343,9 @@ h2 em {
 
 .menu-item {
   display: grid;
-  grid-template-columns: minmax(0, auto) 1fr auto;
-  align-items: end;
-  gap: 9px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 16px;
   padding: 12px 0;
 }
 
@@ -386,16 +386,17 @@ h2 em {
 }
 
 .menu-item::after {
-  content: "";
-  min-width: 16px;
-  border-bottom: 1px dotted #718085;
-  margin-bottom: 6px;
+  content: none;
 }
 
 .price {
+  justify-self: end;
   color: var(--sea);
   font-size: 13px;
   font-weight: 800;
+  line-height: 1.2;
+  padding-top: 4px;
+  white-space: nowrap;
 }
 
 .price small {
@@ -534,7 +535,7 @@ h2 em {
   }
 
   .menu-item {
-    grid-template-columns: minmax(0, auto) 1fr auto;
+    grid-template-columns: minmax(0, 1fr) auto;
     gap: 7px;
   }
 
@@ -573,10 +574,6 @@ h2 em {
 @media (max-width: 380px) {
   .menu-item {
     grid-template-columns: 1fr auto;
-  }
-
-  .menu-item::after {
-    display: none;
   }
 
   .item-main {
