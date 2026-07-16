@@ -757,19 +757,6 @@ const menu = [
   }
 ];
 
-const labels = {
-  antipasti: "Antipasti",
-  primi: "Primi",
-  mare: "Mare",
-  terra: "Terra",
-  pizzeria: "Pizzeria",
-  contorni: "Contorni",
-  dolci: "Dolci",
-  bevande: "Bevande",
-  vini: "Vini",
-  distillati: "Spirits"
-};
-
 const subtitles = {
   antipasti: "Per iniziare",
   primi: "Proposte di pesce e di terra",
@@ -783,7 +770,6 @@ const subtitles = {
   distillati: "Amari, grappe, rum e gin"
 };
 
-const order = ["antipasti", "primi", "mare", "terra", "pizzeria", "contorni", "dolci", "bevande", "vini", "distillati"];
 const menuGrid = document.querySelector("#menuGrid");
 
 const groups = {
@@ -830,6 +816,29 @@ const categoryImages = {
   distillati: "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?auto=format&fit=crop&w=900&q=80"
 };
 
+const menuSections = [
+  { key: "antipasti-pesce", title: "Antipasti mare", subtitle: "Proposte di pesce", category: "antipasti", group: groups.antipasti[0], image: categoryImages.antipasti },
+  { key: "antipasti-terra", title: "Antipasti terra", subtitle: "Salumi, formaggi e mozzarella", category: "antipasti", group: groups.antipasti[1], image: categoryImages.terra },
+  { key: "primi-pesce", title: "Primi mare", subtitle: "Pasta fresca e pescato", category: "primi", group: groups.primi[0], image: categoryImages.primi },
+  { key: "primi-terra", title: "Primi terra", subtitle: "Sugo, tradizione e sapori lucani", category: "primi", group: groups.primi[1], image: categoryImages.contorni },
+  { key: "mare", title: "Mare", subtitle: subtitles.mare, category: "mare", image: categoryImages.mare },
+  { key: "terra", title: "Terra", subtitle: subtitles.terra, category: "terra", image: categoryImages.terra },
+  { key: "pizze-rosse", title: "Pizze rosse", subtitle: "Pomodoro, forno e classici", category: "pizzeria", group: groups.pizzeria[0], image: categoryImages.pizzeria },
+  { key: "pizze-bianche", title: "Pizze bianche", subtitle: "Mozzarella, formaggi e verdure", category: "pizzeria", group: groups.pizzeria[1], image: categoryImages.pizzeria },
+  { key: "pizze-speciali", title: "Pizze speciali", subtitle: "Le proposte Al Viale", category: "pizzeria", group: groups.pizzeria[2], image: categoryImages.pizzeria },
+  { key: "contorni", title: "Contorni", subtitle: subtitles.contorni, category: "contorni", image: categoryImages.contorni },
+  { key: "dolci", title: "Dolci", subtitle: subtitles.dolci, category: "dolci", image: categoryImages.dolci },
+  { key: "bibite", title: "Bibite", subtitle: "Acqua e soft drink", category: "bevande", group: groups.bevande[0], image: categoryImages.bevande },
+  { key: "birre-vino-casa", title: "Birre e vino casa", subtitle: "Spina, bottiglia e vino sfuso", category: "bevande", group: groups.bevande[1], image: categoryImages.bevande },
+  { key: "vini-bianchi", title: "Bianchi", subtitle: "I nostri vini", category: "vini", group: groups.vini[0], image: categoryImages.vini },
+  { key: "vini-rosati", title: "Rosati", subtitle: "I nostri vini", category: "vini", group: groups.vini[1], image: categoryImages.vini },
+  { key: "vini-rossi", title: "Rossi", subtitle: "I nostri vini", category: "vini", group: groups.vini[2], image: categoryImages.vini },
+  { key: "bollicine", title: "Bollicine", subtitle: "Metodo classico e champagne", category: "vini", group: groups.vini[3], image: categoryImages.vini },
+  { key: "digestivi", title: "Digestivi", subtitle: "Amari e limoncello", category: "distillati", group: groups.distillati[0], image: categoryImages.distillati },
+  { key: "grappe-rum", title: "Whisky, rum e grappe", subtitle: "Spirits", category: "distillati", group: groups.distillati[1], image: categoryImages.distillati },
+  { key: "gin", title: "Gin", subtitle: "Gin e gin tonic", category: "distillati", group: groups.distillati[2], image: categoryImages.distillati }
+];
+
 function formatPrice(price) {
   return price === "--" ? "s.q." : `<small>&euro;</small>${price}`;
 }
@@ -854,43 +863,25 @@ function renderItems(items, offset = 0) {
   return items.map((item, index) => itemTemplate(item, offset + index)).join("");
 }
 
-function renderGroupedItems(category, items) {
-  const config = groups[category];
-  if (!config) return renderItems(items);
-
-  let offset = 0;
-  return config.map((group) => {
-    const groupItems = items.filter(group.match);
-    if (!groupItems.length) return "";
-    const html = `
-      <div class="menu-group menu-group-${group.title.toLowerCase().replaceAll(" ", "-")}">
-        <h3>${group.title}</h3>
-        ${renderItems(groupItems, offset)}
-      </div>
-    `;
-    offset += groupItems.length;
-    return html;
-  }).join("");
-}
-
 function renderMenu() {
-  menuGrid.innerHTML = order.map((category, categoryIndex) => {
-    const items = menu.filter((item) => item.category === category);
+  menuGrid.innerHTML = menuSections.map((section, sectionIndex) => {
+    const categoryItems = menu.filter((item) => item.category === section.category);
+    const items = section.group ? categoryItems.filter(section.group.match) : categoryItems;
     if (!items.length) return "";
 
     return `
-      <section class="chapter chapter-${category}">
+      <section class="chapter chapter-${section.category} chapter-${section.key}">
         <header class="chapter-head">
-          <img class="category-photo" src="${categoryImages[category]}" alt="${labels[category]} - immagine rappresentativa" loading="lazy" referrerpolicy="no-referrer" onerror="this.classList.add('is-hidden')">
+          <img class="category-photo" src="${section.image}" alt="${section.title} - immagine rappresentativa" loading="lazy" referrerpolicy="no-referrer" onerror="this.classList.add('is-hidden')">
           <div class="chapter-meta">
-            <span>${String(categoryIndex + 1).padStart(2, "0")}</span>
+            <span>${String(sectionIndex + 1).padStart(2, "0")}</span>
             <span>${items.length} proposte</span>
           </div>
-          <h2 class="chapter-title">${labels[category]}</h2>
-          <p class="chapter-subtitle">${subtitles[category]}</p>
+          <h2 class="chapter-title">${section.title}</h2>
+          <p class="chapter-subtitle">${section.subtitle}</p>
         </header>
         <div class="item-list">
-          ${renderGroupedItems(category, items)}
+          ${renderItems(items)}
         </div>
       </section>
     `;
