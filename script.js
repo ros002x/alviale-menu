@@ -114,39 +114,105 @@ const menu = [
   },
   {
     category: "pizzeria",
-    name: "Margherita del Viale",
-    description: "Pomodoro, fiordilatte, basilico e olio extravergine.",
-    price: "7"
+    name: "Pizza pane",
+    description: "Olio, sale e origano.",
+    price: "3,50"
   },
   {
     category: "pizzeria",
-    name: "Lucana",
-    description: "Pomodoro, mozzarella, salsiccia, peperoni cruschi e olive.",
-    price: "10"
+    name: "Pizza Alessya",
+    description: "Pizza rossa con origano in cottura.",
+    price: "5,00"
+  },
+  {
+    category: "pizzeria",
+    name: "Marinara",
+    description: "Pomodoro, origano e aglio.",
+    price: "4,50"
+  },
+  {
+    category: "pizzeria",
+    name: "Margherita",
+    description: "Pomodoro, mozzarella e basilico.",
+    price: "5,00"
+  },
+  {
+    category: "pizzeria",
+    name: "Salame",
+    description: "Pomodoro, mozzarella, salame dolce e basilico.",
+    price: "6,00"
   },
   {
     category: "pizzeria",
     name: "Diavola",
     description: "Pomodoro, mozzarella e salame piccante.",
-    price: "9"
+    price: "6,00"
   },
   {
     category: "pizzeria",
-    name: "Quattro formaggi",
-    description: "Mozzarella, gorgonzola, provola e grana.",
-    price: "10"
+    name: "Cotto",
+    description: "Pomodoro, mozzarella e prosciutto cotto.",
+    price: "6,00"
   },
   {
     category: "pizzeria",
-    name: "Ortolana",
-    description: "Mozzarella, verdure grigliate e basilico.",
-    price: "9"
+    name: "Cotto e funghi",
+    description: "Pomodoro, mozzarella, cotto e funghi champignon.",
+    price: "7,00"
+  },
+  {
+    category: "pizzeria",
+    name: "Quattro stagioni",
+    description: "Pomodoro, mozzarella, cotto, funghi champignon, carciofi e olive.",
+    price: "8,00"
+  },
+  {
+    category: "pizzeria",
+    name: "Capricciosa",
+    description: "Pomodoro, mozzarella, cotto, funghi champignon, carciofi, salame, olive e acciughe.",
+    price: "9,00"
+  },
+  {
+    category: "pizzeria",
+    name: "Napoli",
+    description: "Pomodoro, mozzarella, capperi e acciughe.",
+    price: "7,00"
   },
   {
     category: "pizzeria",
     name: "Tonno e cipolla",
-    description: "Pomodoro, mozzarella, tonno e cipolla rossa.",
-    price: "10"
+    description: "Pomodoro, mozzarella, tonno e cipolla.",
+    price: "8,00"
+  },
+  {
+    category: "pizzeria",
+    name: "Wurstel e patatine",
+    description: "Pomodoro, mozzarella, wurstel e patatine fritte.",
+    price: "7,00"
+  },
+  {
+    category: "pizzeria",
+    name: "Salsiccia e porcini",
+    description: "Pomodoro, mozzarella, salsiccia fresca e funghi porcini.",
+    price: "8,00"
+  },
+  {
+    category: "pizzeria",
+    name: "Bufalina",
+    description: "Pomodoro, mozzarella di bufala e basilico.",
+    price: "8,00"
+  },
+  {
+    category: "pizzeria",
+    name: "Tartufata",
+    description: "Mozzarella di bufala, pomodorino fresco, porcini e crema al tartufo.",
+    price: "9,00"
+  },
+  {
+    category: "pizzeria",
+    name: "La Calabrese",
+    description: "Pomodoro, mozzarella, nduja, salame piccante, cipolla e olive.",
+    price: "8,00"
   },
   {
     category: "contorni",
