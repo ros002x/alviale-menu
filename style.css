@@ -436,19 +436,36 @@ h2 em {
 }
 
 .chapter-pizzeria .item-list {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0 54px;
+  grid-template-columns: 1fr;
+  gap: 0;
 }
 
-.chapter-pizzeria .menu-group-pizze-speciali {
-  grid-column: 1 / -1;
+.chapter-pizzeria .menu-group {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0 54px;
 }
 
-.chapter-pizzeria .menu-group-pizze-speciali h3 {
+.chapter-pizzeria .menu-group h3 {
   grid-column: 1 / -1;
+}
+
+.chapter-pizzeria .menu-item {
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.chapter-pizzeria .item-name,
+.chapter-vini .item-name,
+.chapter-distillati .item-name,
+.chapter-primi .item-name {
+  font: 600 clamp(19px, 1.6vw, 22px) / 1.14 "Fraunces";
+}
+
+.chapter-pizzeria .item-description,
+.chapter-vini .item-description,
+.chapter-distillati .item-description,
+.chapter-primi .item-description {
+  font-size: 10px;
 }
 
 .real-menu > footer {
@@ -562,7 +579,7 @@ h2 em {
   }
 
   .chapter-pizzeria .item-list,
-  .chapter-pizzeria .menu-group-pizze-speciali {
+  .chapter-pizzeria .menu-group {
     grid-template-columns: 1fr;
   }
 
