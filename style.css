@@ -345,11 +345,30 @@ h2 em {
 }
 
 .menu-item {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: start;
   gap: 16px;
   padding: 12px 0;
+}
+
+.menu-item.featured {
+  margin: 4px 0;
+  border-left: 4px solid var(--coral);
+  border-radius: 10px;
+  background:
+    linear-gradient(90deg, rgba(238, 118, 91, 0.14), rgba(242, 175, 72, 0.08) 58%, rgba(255, 255, 255, 0));
+  padding: 13px 12px 13px 14px;
+}
+
+.menu-item.featured .item-name {
+  color: #052c38;
+}
+
+.menu-item.featured .price {
+  color: var(--coral);
+  font-size: 15px;
 }
 
 .item-main {
@@ -397,13 +416,13 @@ h2 em {
 
 .badge {
   border-radius: 999px;
-  background: transparent;
-  color: var(--coral);
-  padding: 0;
-  font-size: 8px;
+  background: var(--coral);
+  color: var(--white);
+  padding: 4px 7px 3px;
+  font-size: 9px;
   font-weight: 800;
-  letter-spacing: 0;
-  text-transform: none;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .real-menu > footer {
@@ -523,6 +542,10 @@ h2 em {
   .menu-item {
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 7px;
+  }
+
+  .menu-item.featured {
+    padding: 12px 10px 12px 12px;
   }
 
   .item-name {
