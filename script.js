@@ -808,6 +808,7 @@ const categoryImages = {
   primi: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=900&q=80",
   mare: "https://images.unsplash.com/photo-1559737558-2f5a35f4523b?auto=format&fit=crop&w=900&q=80",
   terra: "https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=900&q=80",
+  antipastiTerra: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80",
   pizzaRossa: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=900&q=80",
   pizzaBianca: "https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?auto=format&fit=crop&w=900&q=80",
   pizzaSpeciale: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=80",
@@ -815,10 +816,10 @@ const categoryImages = {
   dolci: "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=900&q=80",
   cocaCola: "https://upload.wikimedia.org/wikipedia/commons/a/a3/Mexican_Coke_%2811380037365%29_%28cropped%29.jpg",
   birra: "https://images.unsplash.com/photo-1532635241-17e820acc59f?auto=format&fit=crop&w=900&q=80",
-  vinoBianco: "https://images.unsplash.com/photo-1568213816046-0ee1c42bd559?auto=format&fit=crop&w=900&q=80",
+  vinoBianco: "https://images.unsplash.com/photo-1560148218-1a83060f7b32?auto=format&fit=crop&w=900&q=80",
   vinoRosato: "https://images.unsplash.com/photo-1547595628-c61a29f496f0?auto=format&fit=crop&w=900&q=80",
   vinoRosso: "https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?auto=format&fit=crop&w=900&q=80",
-  bollicine: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=900&q=80",
+  bollicine: "https://images.unsplash.com/photo-1600326145359-3a44909d1a39?auto=format&fit=crop&w=900&q=80",
   limoncello: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=900&q=80",
   whisky: "https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&w=900&q=80",
   gin: "https://upload.wikimedia.org/wikipedia/commons/a/a3/Bombay_Gin.jpg"
@@ -826,7 +827,7 @@ const categoryImages = {
 
 const menuSections = [
   { key: "antipasti-pesce", title: "Antipasti mare", subtitle: "Proposte di pesce", category: "antipasti", group: groups.antipasti[0], image: categoryImages.antipasti },
-  { key: "antipasti-terra", title: "Antipasti terra", subtitle: "Salumi, formaggi e mozzarella", category: "antipasti", group: groups.antipasti[1], image: categoryImages.terra },
+  { key: "antipasti-terra", title: "Antipasti terra", subtitle: "Salumi, formaggi e mozzarella", category: "antipasti", group: groups.antipasti[1], image: categoryImages.antipastiTerra },
   { key: "primi-pesce", title: "Primi mare", subtitle: "Pasta fresca e pescato", category: "primi", group: groups.primi[0], image: categoryImages.primi },
   { key: "primi-terra", title: "Primi terra", subtitle: "Sugo, tradizione e sapori lucani", category: "primi", group: groups.primi[1], image: categoryImages.contorni },
   { key: "mare", title: "Mare", subtitle: subtitles.mare, category: "mare", image: categoryImages.mare },
