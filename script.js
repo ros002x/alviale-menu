@@ -1,116 +1,235 @@
 const menu = [
   {
     category: "antipasti",
-    name: "Tagliere del Viale",
-    description: "Salumi lucani, formaggi, sottoli, olive e pane caldo.",
-    price: "16",
+    name: "Antipasto Al Viale",
+    description: "Cinque tipologie di antipasto in base al pescato del giorno.",
+    price: "15",
     featured: true
   },
   {
     category: "antipasti",
-    name: "Verdure grigliate e olio lucano",
-    description: "Melanzane, zucchine e peperoni con erbe mediterranee.",
+    name: "Insalata di mare",
+    description: "Seppia, polpo, frutti di scoglio e carota.",
+    price: "15"
+  },
+  {
+    category: "antipasti",
+    name: "Zuppa di cozze Al Viale",
+    description: "Cozze, cicorie, pomodoro, tentacolo di polpo e tarallo. Puo variare in base al pescato giornaliero.",
+    price: "20"
+  },
+  {
+    category: "antipasti",
+    name: "Impepata di cozze",
+    description: "Cozze al pepe.",
+    price: "10"
+  },
+  {
+    category: "antipasti",
+    name: "Il Cantabrico",
+    description: "Crostino di pane fritto, stracciatella e alici del Cantabrico.",
+    price: "12"
+  },
+  {
+    category: "antipasti",
+    name: "Crudite di mare",
+    description: "Su prenotazione. Prezzo in base alla disponibilita.",
+    price: "--"
+  },
+  {
+    category: "antipasti",
+    name: "Tartare di tonno",
+    description: "Tartare di tonno.",
+    price: "15"
+  },
+  {
+    category: "antipasti",
+    name: "Tartare di gambero viola",
+    description: "Tartare di gambero viola.",
+    price: "22"
+  },
+  {
+    category: "antipasti",
+    name: "Salmone Al Viale",
+    description: "Salmone disidratato con crema di limone, pepe rosa e olive taggiasche.",
+    price: "16"
+  },
+  {
+    category: "antipasti",
+    name: "Antipasto Al Viale terra",
+    description: "Salumi misti, verdure grigliate, fior di latte e formaggi misti.",
+    price: "15"
+  },
+  {
+    category: "antipasti",
+    name: "Formaggi misti con confetture",
+    description: "Selezione di formaggi misti con confetture.",
+    price: "12"
+  },
+  {
+    category: "antipasti",
+    name: "Crudo e mozzarella",
+    description: "Prosciutto crudo e mozzarella.",
+    price: "12"
+  },
+  {
+    category: "antipasti",
+    name: "Cotto e mozzarella",
+    description: "Prosciutto cotto e mozzarella.",
     price: "8"
   },
   {
-    category: "antipasti",
-    name: "Bruschette miste",
-    description: "Pomodoro, basilico, crema di olive e verdure di stagione.",
-    price: "7"
-  },
-  {
-    category: "antipasti",
-    name: "Frittelle della casa",
-    description: "Impasto salato fritto, servito caldo con salsa leggera.",
-    price: "8"
-  },
-  {
-    category: "antipasti",
-    name: "Polpo, patate e prezzemolo",
-    description: "Insalata tiepida con olio extravergine e limone.",
-    price: "13"
+    category: "primi",
+    name: "Spaghetti alle cozze",
+    description: "Spaghetti con cozze.",
+    price: "10"
   },
   {
     category: "primi",
-    name: "Frizzuli con mollica croccante",
-    description: "Pasta fresca ispirata alla tradizione lucana, con pomodoro e mollica tostata.",
-    price: "12",
-    featured: true
-  },
-  {
-    category: "primi",
-    name: "Orecchiette agli agrumi e gamberi",
-    description: "Richiamo alla costa ionica e agli agrumi del territorio.",
+    name: "Spaghetto quadrato alici e crusco",
+    description: "Pomodorini, alici, peperone crusco e mollica croccante.",
     price: "15"
   },
   {
     category: "primi",
     name: "Spaghetti alle vongole",
-    description: "Vongole, aglio, olio, prezzemolo e fondo di mare.",
-    price: "16",
+    description: "Spaghetti alle vongole.",
+    price: "15",
     featured: true
   },
   {
     category: "primi",
-    name: "Cavatelli al ragu lucano",
-    description: "Pasta fresca con ragu lento e pecorino.",
-    price: "13"
+    name: "Ravioli ai crostacei",
+    description: "Con profumo di polvere di lime.",
+    price: "15"
   },
   {
     category: "primi",
-    name: "Risotto limone e gambero",
-    description: "Risotto cremoso con zest di limone e gamberi.",
+    name: "Risotto ai frutti di mare",
+    description: "Minimo per due persone, prezzo a porzione.",
+    price: "15"
+  },
+  {
+    category: "primi",
+    name: "Calamarata allo spada",
+    description: "Pesce spada, melanzane, pinoli e menta fresca.",
+    price: "15"
+  },
+  {
+    category: "primi",
+    name: "Scialatiello allo scoglio",
+    description: "Frutti di mare, crostacei, pomodorini e prezzemolo.",
+    price: "15"
+  },
+  {
+    category: "primi",
+    name: "Troccoli scampi e funghi",
+    description: "Pasta fresca con scampi, funghi freschi e prezzemolo.",
+    price: "15"
+  },
+  {
+    category: "primi",
+    name: "Pacchero all'astice",
+    description: "Pacchero all'astice.",
+    price: "30"
+  },
+  {
+    category: "primi",
+    name: "Orecchiette al sugo",
+    description: "Sugo di pomodoro fresco e basilico.",
+    price: "7"
+  },
+  {
+    category: "primi",
+    name: "Pennette all'arrabbiata",
+    description: "Pomodoro, aglio, olio e peperoncino piccante.",
+    price: "7"
+  },
+  {
+    category: "primi",
+    name: "Fusilli al sugo lucano",
+    description: "Sugo della tradizione, peperone crusco e mollica croccante.",
+    price: "12"
+  },
+  {
+    category: "primi",
+    name: "Trascodi salsiccia e funghi",
+    description: "Pasta fresca, salsiccia nostrana e funghi freschi.",
+    price: "12"
+  },
+  {
+    category: "mare",
+    name: "Frittura di calamari",
+    description: "Frittura di calamari.",
     price: "17"
   },
   {
     category: "mare",
-    name: "Grigliata dello Ionio",
-    description: "Selezione di pescato alla griglia con limone, olio extravergine e contorno.",
-    price: "22",
-    featured: true
+    name: "Frittura di calamari e gamberi",
+    description: "Frittura di calamari e gamberi.",
+    price: "16"
   },
   {
     category: "mare",
-    name: "Frittura leggera",
-    description: "Calamari, gamberi e verdure croccanti. Disponibilita' da confermare ogni giorno.",
-    price: "18"
-  },
-  {
-    category: "mare",
-    name: "Orata al forno",
-    description: "Con patate, pomodorini, olive e profumo di origano.",
-    price: "20"
-  },
-  {
-    category: "mare",
-    name: "Calamaro alla piastra",
-    description: "Servito con rucola, limone e verdure di stagione.",
-    price: "17"
-  },
-  {
-    category: "mare",
-    name: "Pepata di cozze",
-    description: "Cozze, pepe nero, prezzemolo e crostini.",
-    price: "11"
-  },
-  {
-    category: "terra",
-    name: "Tagliata di manzo",
-    description: "Rucola, scaglie di grana, olio extravergine e sale grosso.",
-    price: "20",
-    featured: true
-  },
-  {
-    category: "terra",
-    name: "Salsiccia lucana alla brace",
-    description: "Con patate rustiche e peperoni.",
+    name: "Frittura di paranza",
+    description: "Pesce di piccola taglia, soggetto a disponibilita in base al pescato del giorno.",
     price: "14"
   },
   {
+    category: "mare",
+    name: "Grigliata mista di mare",
+    description: "Seppia, filetti di spigola e orata, gamberone e tonno. Puo variare in base al pescato del giorno.",
+    price: "25",
+    featured: true
+  },
+  {
+    category: "mare",
+    name: "Tagliata di tonno",
+    description: "Con pomodorini, rucola e scaglie di grana. Porzione minima 300g.",
+    price: "17"
+  },
+  {
+    category: "mare",
+    name: "Tagliata di seppia alla genovese",
+    description: "Seppie tenere scottate con pesto di basilico e pinoli.",
+    price: "12"
+  },
+  {
+    category: "mare",
+    name: "Pescato del giorno al forno",
+    description: "Secondo disponibilita giornaliera.",
+    price: "40/kg"
+  },
+  {
     category: "terra",
-    name: "Cotoletta e patatine",
-    description: "Piatto semplice per bambini e tavolate.",
+    name: "Petto di pollo arrosto",
+    description: "Con insalata verde.",
+    price: "8"
+  },
+  {
+    category: "terra",
+    name: "Cotoletta di pollo",
+    description: "Con contorno di patatine fritte.",
     price: "10"
+  },
+  {
+    category: "terra",
+    name: "Tagliata di vitello",
+    description: "Con rucola, scaglie di grana e pomodorini.",
+    price: "15",
+    featured: true
+  },
+  {
+    category: "terra",
+    name: "Entrecote di vitello alla griglia",
+    description: "Sale rosa, guacamole, confettura di cipolla. Minimo 300g.",
+    price: "18"
+  },
+  {
+    category: "terra",
+    name: "Filetto di vitello alla piastra",
+    description: "Servito con insalata verde e patatine fritte. Minimo 300g.",
+    price: "22"
   },
   {
     category: "pizzeria",
@@ -215,10 +334,89 @@ const menu = [
     price: "8,00"
   },
   {
+    category: "pizzeria",
+    name: "Quattro formaggi",
+    description: "Mozzarella, emmental, gorgonzola e provola affumicata.",
+    price: "8,00"
+  },
+  {
+    category: "pizzeria",
+    name: "Parma",
+    description: "Pomodoro, mozzarella e crudo di Parma.",
+    price: "8,00"
+  },
+  {
+    category: "pizzeria",
+    name: "Vegetariana",
+    description: "Mozzarella, zucchine, melanzane e peperoni grigliati.",
+    price: "8,00"
+  },
+  {
+    category: "pizzeria",
+    name: "Al Viale",
+    description: "Provola affumicata, caciocavallo, pomodorini semi dry, stracciatella e basilico.",
+    price: "13,00",
+    featured: true
+  },
+  {
+    category: "pizzeria",
+    name: "Andrea",
+    description: "Mozzarella, peperoni, pomodorino semi dry in cottura, stracciatella e basilico.",
+    price: "11,00"
+  },
+  {
+    category: "pizzeria",
+    name: "Alessio",
+    description: "Mozzarella di bufala, pomodorini secchi, capocollo e scaglie di provolone piccante.",
+    price: "13,00"
+  },
+  {
+    category: "pizzeria",
+    name: "Antonio",
+    description: "Mozzarella, pomodorini semi dry, tonno, cipolla, burratina e basilico in uscita.",
+    price: "13,00"
+  },
+  {
+    category: "pizzeria",
+    name: "Daniele",
+    description: "Crema di zucca, mozzarella, salsiccia fresca, funghi porcini e grana in uscita.",
+    price: "13,00"
+  },
+  {
+    category: "pizzeria",
+    name: "Biancaneve Cilentana",
+    description: "Mozzarella, pomodorino, basilico e olio evo.",
+    price: "6,50"
+  },
+  {
+    category: "pizzeria",
+    name: "Salsiccia e patate",
+    description: "Mozzarella, salsiccia e patate al forno.",
+    price: "10,00"
+  },
+  {
+    category: "pizzeria",
+    name: "Vincenzo",
+    description: "Mozzarella, mortadella, stracciatella e granella di pistacchio.",
+    price: "9,00"
+  },
+  {
+    category: "pizzeria",
+    name: "Salsiccia e friarielli",
+    description: "Mozzarella, salsiccia, friarielli e provola affumicata.",
+    price: "10,00"
+  },
+  {
+    category: "pizzeria",
+    name: "Crudaiola",
+    description: "Mozzarella, pesto di pistacchio, pomodorini e scaglie di grana.",
+    price: "10,00"
+  },
+  {
     category: "contorni",
-    name: "Patate rustiche",
-    description: "Patate al forno con rosmarino.",
-    price: "5"
+    name: "Insalata verde",
+    description: "Insalata verde.",
+    price: "4"
   },
   {
     category: "contorni",
@@ -228,9 +426,21 @@ const menu = [
   },
   {
     category: "contorni",
-    name: "Verdure di stagione",
-    description: "Contorno del giorno dalla cucina.",
+    name: "Patatine fritte",
+    description: "Patatine fritte.",
+    price: "4"
+  },
+  {
+    category: "contorni",
+    name: "Verdure grigliate",
+    description: "Verdure grigliate.",
     price: "6"
+  },
+  {
+    category: "contorni",
+    name: "Insalatona Al Viale",
+    description: "Rucola, tonno, pomodorini, mais, olive taggiasche, scaglie di grana e mozzarella.",
+    price: "10"
   },
   {
     category: "dolci",
@@ -259,27 +469,291 @@ const menu = [
   },
   {
     category: "bevande",
-    name: "Acqua",
-    description: "Naturale o frizzante.",
-    price: "2"
+    name: "Acqua naturale",
+    description: "Bottiglia.",
+    price: "2,00"
   },
   {
     category: "bevande",
-    name: "Calice di vino",
-    description: "Bianco, rosso o rosato della casa.",
-    price: "5"
+    name: "Acqua effervescente naturale",
+    description: "Bottiglia.",
+    price: "2,00"
   },
   {
     category: "bevande",
-    name: "Birra alla spina",
-    description: "Media.",
-    price: "5"
+    name: "Aranciata 33cl",
+    description: "Lattina.",
+    price: "2,50"
   },
   {
     category: "bevande",
-    name: "Amari e digestivi",
-    description: "Selezione della casa.",
-    price: "4"
+    name: "Coca Cola 33cl",
+    description: "Lattina.",
+    price: "3,00"
+  },
+  {
+    category: "bevande",
+    name: "Coca Cola 1L",
+    description: "Bottiglia.",
+    price: "4,00"
+  },
+  {
+    category: "bevande",
+    name: "The pesca 33cl",
+    description: "Lattina.",
+    price: "2,50"
+  },
+  {
+    category: "bevande",
+    name: "The limone 33cl",
+    description: "Lattina.",
+    price: "2,50"
+  },
+  {
+    category: "bevande",
+    name: "Calice vino bianco",
+    description: "Vino della casa.",
+    price: "2,50"
+  },
+  {
+    category: "bevande",
+    name: "Vino della casa bianco 1L",
+    description: "Vino della casa.",
+    price: "8,00"
+  },
+  {
+    category: "bevande",
+    name: "Vino della casa bianco 1/2L",
+    description: "Vino della casa.",
+    price: "4,00"
+  },
+  {
+    category: "bevande",
+    name: "Messina Cristalli di Sale 0,2",
+    description: "Birra alla spina.",
+    price: "3,00"
+  },
+  {
+    category: "bevande",
+    name: "Messina Cristalli di Sale 0,4",
+    description: "Birra alla spina.",
+    price: "5,00"
+  },
+  {
+    category: "bevande",
+    name: "Heineken 0,2",
+    description: "Birra alla spina.",
+    price: "3,00"
+  },
+  {
+    category: "bevande",
+    name: "Heineken 0,4",
+    description: "Birra alla spina.",
+    price: "5,00"
+  },
+  {
+    category: "bevande",
+    name: "Nastro Azzurro analcolica 33cl",
+    description: "Birra in bottiglia.",
+    price: "2,50"
+  },
+  {
+    category: "bevande",
+    name: "Nastro Azzurro 33cl",
+    description: "Birra in bottiglia.",
+    price: "3,00"
+  },
+  {
+    category: "vini",
+    name: "Greco Spiti",
+    description: "Bianco.",
+    price: "15"
+  },
+  {
+    category: "vini",
+    name: "Re Manfredi bianco",
+    description: "Bianco.",
+    price: "20"
+  },
+  {
+    category: "vini",
+    name: "Lica",
+    description: "Bianco.",
+    price: "22"
+  },
+  {
+    category: "vini",
+    name: "Labellum Falanghina",
+    description: "Bianco.",
+    price: "16"
+  },
+  {
+    category: "vini",
+    name: "Labellum Chardonnay",
+    description: "Bianco.",
+    price: "18"
+  },
+  {
+    category: "vini",
+    name: "Rosa dei Sette",
+    description: "Rosato.",
+    price: "15"
+  },
+  {
+    category: "vini",
+    name: "Re Manfredi rosato",
+    description: "Rosato.",
+    price: "20"
+  },
+  {
+    category: "vini",
+    name: "Five Roses",
+    description: "Rosato.",
+    price: "15"
+  },
+  {
+    category: "vini",
+    name: "Lery",
+    description: "Rosato.",
+    price: "22"
+  },
+  {
+    category: "vini",
+    name: "Re Manfredi Taglio del Tralcio",
+    description: "Rosso.",
+    price: "20"
+  },
+  {
+    category: "vini",
+    name: "Vulcano 800",
+    description: "Rosso.",
+    price: "18"
+  },
+  {
+    category: "vini",
+    name: "Le Roi Rosé Brut",
+    description: "Bollicine.",
+    price: "15"
+  },
+  {
+    category: "vini",
+    name: "Montelvini Promosso Extra Dry",
+    description: "Bollicine.",
+    price: "15"
+  },
+  {
+    category: "vini",
+    name: "Masottina Brut",
+    description: "Bollicine.",
+    price: "20"
+  },
+  {
+    category: "vini",
+    name: "Vulcano 800 Pinot Nero Metodo Classico",
+    description: "Bollicine.",
+    price: "40"
+  },
+  {
+    category: "vini",
+    name: "Franciacorta Castello Bonomi Cuvée 22",
+    description: "Bollicine.",
+    price: "35"
+  },
+  {
+    category: "vini",
+    name: "Ca del Bosco Franciacorta",
+    description: "Bollicine.",
+    price: "30"
+  },
+  {
+    category: "vini",
+    name: "Champagne A. Viot & Fils Dosaggio 0 Brut",
+    description: "Bollicine.",
+    price: "60"
+  },
+  {
+    category: "vini",
+    name: "Berlucchi Cuvée Imperiale Brut",
+    description: "Bollicine.",
+    price: "30"
+  },
+  {
+    category: "vini",
+    name: "Laurent Perrier Champagne Cuvée Rosé Brut",
+    description: "Bollicine.",
+    price: "100"
+  },
+  {
+    category: "distillati",
+    name: "Amaro del Capo",
+    description: "Digestivo.",
+    price: "2,50"
+  },
+  {
+    category: "distillati",
+    name: "Amaro Lucano",
+    description: "Digestivo.",
+    price: "2,50"
+  },
+  {
+    category: "distillati",
+    name: "Amaro Biancamenta",
+    description: "Digestivo.",
+    price: "2,50"
+  },
+  {
+    category: "distillati",
+    name: "Amaro Petrus Boonekamp",
+    description: "Digestivo.",
+    price: "2,50"
+  },
+  {
+    category: "distillati",
+    name: "Amaro Jefferson",
+    description: "Digestivo.",
+    price: "3,00"
+  },
+  {
+    category: "distillati",
+    name: "Limoncello",
+    description: "Digestivo.",
+    price: "2,50"
+  },
+  {
+    category: "distillati",
+    name: "Whisky Astucciato",
+    description: "Whisky.",
+    price: "3,00"
+  },
+  {
+    category: "distillati",
+    name: "Dictador 12",
+    description: "Rum.",
+    price: "6,00"
+  },
+  {
+    category: "distillati",
+    name: "Grappa Nardini Extrafina",
+    description: "Grappa.",
+    price: "4,00"
+  },
+  {
+    category: "distillati",
+    name: "Grappa Nardini Bianca",
+    description: "Grappa.",
+    price: "4,00"
+  },
+  {
+    category: "distillati",
+    name: "Gin Bombay",
+    description: "Gin.",
+    price: "3,00"
+  },
+  {
+    category: "distillati",
+    name: "Gin Tonic Bombay",
+    description: "Gin tonic.",
+    price: "6,00"
   }
 ];
 
@@ -291,21 +765,25 @@ const labels = {
   pizzeria: "Pizzeria",
   contorni: "Contorni",
   dolci: "Dolci",
-  bevande: "Bevande"
+  bevande: "Bevande",
+  vini: "Vini",
+  distillati: "Spirits"
 };
 
 const subtitles = {
   antipasti: "Per iniziare",
-  primi: "Pasta fresca e sapori del territorio",
-  mare: "Pescato, griglia e fritture",
-  terra: "Carne e cucina semplice",
+  primi: "Proposte di pesce e di terra",
+  mare: "Fritture, griglia e pescato",
+  terra: "Secondi di carne",
   pizzeria: "Impasto, forno e classici",
   contorni: "Da abbinare",
   dolci: "Fine pasto",
-  bevande: "Acqua, vino e digestivi"
+  bevande: "Acqua, bibite e birre",
+  vini: "Bianchi, rosati, rossi e bollicine",
+  distillati: "Amari, grappe, rum e gin"
 };
 
-const order = ["antipasti", "primi", "mare", "terra", "pizzeria", "contorni", "dolci", "bevande"];
+const order = ["antipasti", "primi", "mare", "terra", "pizzeria", "contorni", "dolci", "bevande", "vini", "distillati"];
 const menuGrid = document.querySelector("#menuGrid");
 
 const categoryImages = {
@@ -316,8 +794,15 @@ const categoryImages = {
   pizzeria: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=80",
   contorni: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=900&q=80",
   dolci: "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=900&q=80",
-  bevande: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=900&q=80"
+  bevande: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=900&q=80",
+  vini: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=900&q=80",
+  distillati: "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?auto=format&fit=crop&w=900&q=80"
 };
+
+function formatPrice(price) {
+  return price === "--" ? "s.q." : `<small>&euro;</small>${price}`;
+}
+
 function itemTemplate(item, index) {
   return `
     <article class="menu-item${item.featured ? " featured" : ""}">
@@ -329,7 +814,7 @@ function itemTemplate(item, index) {
         </div>
         <p class="item-description">${item.description}</p>
       </div>
-      <span class="price"><small>&euro;</small>${item.price}</span>
+      <span class="price">${formatPrice(item.price)}</span>
     </article>
   `;
 }
