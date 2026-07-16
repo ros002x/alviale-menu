@@ -796,7 +796,8 @@ const groups = {
     { title: "Proposte di terra", match: (item) => ["Orecchiette al sugo", "Pennette all'arrabbiata", "Fusilli al sugo lucano", "Trascodi salsiccia e funghi"].includes(item.name) }
   ],
   pizzeria: [
-    { title: "Classiche", match: (item) => !["Al Viale", "Andrea", "Alessio", "Antonio", "Daniele", "Biancaneve Cilentana", "Salsiccia e patate", "Vincenzo", "Salsiccia e friarielli", "Crudaiola"].includes(item.name) },
+    { title: "Pizze rosse", match: (item) => ["Pizza Alessya", "Marinara", "Margherita", "Salame", "Diavola", "Cotto", "Cotto e funghi", "Quattro stagioni", "Capricciosa", "Napoli", "Tonno e cipolla", "Wurstel e patatine", "Salsiccia e porcini", "Bufalina", "La Calabrese", "Parma"].includes(item.name) },
+    { title: "Pizze bianche", match: (item) => ["Pizza pane", "Tartufata", "Quattro formaggi", "Vegetariana"].includes(item.name) },
     { title: "Pizze speciali", match: (item) => ["Al Viale", "Andrea", "Alessio", "Antonio", "Daniele", "Biancaneve Cilentana", "Salsiccia e patate", "Vincenzo", "Salsiccia e friarielli", "Crudaiola"].includes(item.name) }
   ],
   bevande: [
@@ -862,7 +863,7 @@ function renderGroupedItems(category, items) {
     const groupItems = items.filter(group.match);
     if (!groupItems.length) return "";
     const html = `
-      <div class="menu-group">
+      <div class="menu-group menu-group-${group.title.toLowerCase().replaceAll(" ", "-")}">
         <h3>${group.title}</h3>
         ${renderItems(groupItems, offset)}
       </div>
