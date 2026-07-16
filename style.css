@@ -472,10 +472,6 @@ h2 em {
   padding: 9px 0;
 }
 
-.chapter-pizzeria .item-name {
-  font: 600 clamp(14px, 1vw, 16px) / 1.2 "Fraunces" !important;
-}
-
 .chapter-pizzeria .item-description {
   margin-top: 4px;
 }
