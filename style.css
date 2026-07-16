@@ -473,7 +473,7 @@ h2 em {
 }
 
 .chapter-pizzeria .item-name {
-  font: 600 clamp(16px, 1.25vw, 18px) / 1.18 "Fraunces";
+  font: 600 clamp(14px, 1vw, 16px) / 1.2 "Fraunces" !important;
 }
 
 .chapter-pizzeria .item-description {
