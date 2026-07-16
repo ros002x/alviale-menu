@@ -805,14 +805,14 @@ const groups = {
 
 const categoryImages = {
   antipasti: "https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=900&q=80",
-  primi: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=900&q=80",
+  primi: "assets/primi-mare.png",
   mare: "https://images.unsplash.com/photo-1559737558-2f5a35f4523b?auto=format&fit=crop&w=900&q=80",
   terra: "https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=900&q=80",
   antipastiTerra: "assets/antipasti-terra.png",
   primiTerra: "assets/primi-terra.png",
   pizzaRossa: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=900&q=80",
   pizzaBianca: "https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?auto=format&fit=crop&w=900&q=80",
-  pizzaSpeciale: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=80",
+  pizzaSpeciale: "assets/pizza-speciale.png",
   contorni: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=900&q=80",
   dolci: "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=900&q=80",
   cocaCola: "https://upload.wikimedia.org/wikipedia/commons/a/a3/Mexican_Coke_%2811380037365%29_%28cropped%29.jpg",
