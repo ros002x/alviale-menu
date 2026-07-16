@@ -821,8 +821,8 @@ const categoryImages = {
   vinoRosato: "https://images.unsplash.com/photo-1547595628-c61a29f496f0?auto=format&fit=crop&w=900&q=80",
   vinoRosso: "https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?auto=format&fit=crop&w=900&q=80",
   bollicine: "assets/bollicine.png",
-  limoncello: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=900&q=80",
-  whisky: "https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&w=900&q=80",
+  limoncello: "assets/digestivi.png",
+  whisky: "assets/whisky-rum-grappe.png",
   gin: "https://upload.wikimedia.org/wikipedia/commons/a/a3/Bombay_Gin.jpg"
 };
 
