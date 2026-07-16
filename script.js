@@ -808,11 +808,16 @@ const categoryImages = {
   primi: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=900&q=80",
   mare: "https://images.unsplash.com/photo-1559737558-2f5a35f4523b?auto=format&fit=crop&w=900&q=80",
   terra: "https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=900&q=80",
-  pizzeria: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=80",
+  pizzaRossa: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=80",
+  pizzaBianca: "https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?auto=format&fit=crop&w=900&q=80",
+  pizzaSpeciale: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=900&q=80",
   contorni: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=900&q=80",
   dolci: "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=900&q=80",
   bevande: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=900&q=80",
-  vini: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=900&q=80",
+  vinoBianco: "https://images.unsplash.com/photo-1568213816046-0ee1c42bd559?auto=format&fit=crop&w=900&q=80",
+  vinoRosato: "https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?auto=format&fit=crop&w=900&q=80",
+  vinoRosso: "https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?auto=format&fit=crop&w=900&q=80",
+  bollicine: "https://images.unsplash.com/photo-1547595628-c61a29f496f0?auto=format&fit=crop&w=900&q=80",
   distillati: "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?auto=format&fit=crop&w=900&q=80"
 };
 
@@ -823,17 +828,17 @@ const menuSections = [
   { key: "primi-terra", title: "Primi terra", subtitle: "Sugo, tradizione e sapori lucani", category: "primi", group: groups.primi[1], image: categoryImages.contorni },
   { key: "mare", title: "Mare", subtitle: subtitles.mare, category: "mare", image: categoryImages.mare },
   { key: "terra", title: "Terra", subtitle: subtitles.terra, category: "terra", image: categoryImages.terra },
-  { key: "pizze-rosse", title: "Pizze rosse", subtitle: "Pomodoro, forno e classici", category: "pizzeria", group: groups.pizzeria[0], image: categoryImages.pizzeria },
-  { key: "pizze-bianche", title: "Pizze bianche", subtitle: "Mozzarella, formaggi e verdure", category: "pizzeria", group: groups.pizzeria[1], image: categoryImages.pizzeria },
-  { key: "pizze-speciali", title: "Pizze speciali", subtitle: "Le proposte Al Viale", category: "pizzeria", group: groups.pizzeria[2], image: categoryImages.pizzeria },
+  { key: "pizze-rosse", title: "Pizze rosse", subtitle: "Pomodoro, forno e classici", category: "pizzeria", group: groups.pizzeria[0], image: categoryImages.pizzaRossa },
+  { key: "pizze-bianche", title: "Pizze bianche", subtitle: "Mozzarella, formaggi e verdure", category: "pizzeria", group: groups.pizzeria[1], image: categoryImages.pizzaBianca },
+  { key: "pizze-speciali", title: "Pizze speciali", subtitle: "Le proposte Al Viale", category: "pizzeria", group: groups.pizzeria[2], image: categoryImages.pizzaSpeciale },
   { key: "contorni", title: "Contorni", subtitle: subtitles.contorni, category: "contorni", image: categoryImages.contorni },
   { key: "dolci", title: "Dolci", subtitle: subtitles.dolci, category: "dolci", image: categoryImages.dolci },
   { key: "bibite", title: "Bibite", subtitle: "Acqua e soft drink", category: "bevande", group: groups.bevande[0], image: categoryImages.bevande },
   { key: "birre-vino-casa", title: "Birre e vino casa", subtitle: "Spina, bottiglia e vino sfuso", category: "bevande", group: groups.bevande[1], image: categoryImages.bevande },
-  { key: "vini-bianchi", title: "Bianchi", subtitle: "I nostri vini", category: "vini", group: groups.vini[0], image: categoryImages.vini },
-  { key: "vini-rosati", title: "Rosati", subtitle: "I nostri vini", category: "vini", group: groups.vini[1], image: categoryImages.vini },
-  { key: "vini-rossi", title: "Rossi", subtitle: "I nostri vini", category: "vini", group: groups.vini[2], image: categoryImages.vini },
-  { key: "bollicine", title: "Bollicine", subtitle: "Metodo classico e champagne", category: "vini", group: groups.vini[3], image: categoryImages.vini },
+  { key: "vini-bianchi", title: "Bianchi", subtitle: "I nostri vini", category: "vini", group: groups.vini[0], image: categoryImages.vinoBianco },
+  { key: "vini-rosati", title: "Rosati", subtitle: "I nostri vini", category: "vini", group: groups.vini[1], image: categoryImages.vinoRosato },
+  { key: "vini-rossi", title: "Rossi", subtitle: "I nostri vini", category: "vini", group: groups.vini[2], image: categoryImages.vinoRosso },
+  { key: "bollicine", title: "Bollicine", subtitle: "Metodo classico e champagne", category: "vini", group: groups.vini[3], image: categoryImages.bollicine },
   { key: "digestivi", title: "Digestivi", subtitle: "Amari e limoncello", category: "distillati", group: groups.distillati[0], image: categoryImages.distillati },
   { key: "grappe-rum", title: "Whisky, rum e grappe", subtitle: "Spirits", category: "distillati", group: groups.distillati[1], image: categoryImages.distillati },
   { key: "gin", title: "Gin", subtitle: "Gin e gin tonic", category: "distillati", group: groups.distillati[2], image: categoryImages.distillati }
@@ -843,12 +848,11 @@ function formatPrice(price) {
   return price === "--" ? "s.q." : `<small>&euro;</small>${price}`;
 }
 
-function itemTemplate(item, index) {
+function itemTemplate(item) {
   return `
     <article class="menu-item${item.featured ? " featured" : ""}">
       <div class="item-main">
         <div class="item-top">
-          <span class="item-number">${String(index + 1).padStart(2, "0")}</span>
           <h3 class="item-name">${item.name}</h3>
           ${item.featured ? '<span class="badge">Consigliato</span>' : ""}
         </div>
@@ -859,8 +863,8 @@ function itemTemplate(item, index) {
   `;
 }
 
-function renderItems(items, offset = 0) {
-  return items.map((item, index) => itemTemplate(item, offset + index)).join("");
+function renderItems(items) {
+  return items.map((item) => itemTemplate(item)).join("");
 }
 
 function renderMenu() {
