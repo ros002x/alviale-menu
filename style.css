@@ -275,6 +275,18 @@ h2 em {
   box-shadow: 0 14px 34px rgba(21, 52, 59, 0.14);
 }
 
+.chapter-antipasti-pesce .category-photo {
+  object-position: center 56%;
+}
+
+.chapter-birre-vino-casa .category-photo {
+  object-position: center 44%;
+}
+
+.chapter-gin .category-photo {
+  object-position: center 48%;
+}
+
 .category-photo.is-hidden {
   display: none;
 }
