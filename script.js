@@ -786,6 +786,36 @@ const subtitles = {
 const order = ["antipasti", "primi", "mare", "terra", "pizzeria", "contorni", "dolci", "bevande", "vini", "distillati"];
 const menuGrid = document.querySelector("#menuGrid");
 
+const groups = {
+  antipasti: [
+    { title: "Proposte di pesce", match: (item) => !["Antipasto Al Viale terra", "Formaggi misti con confetture", "Crudo e mozzarella", "Cotto e mozzarella"].includes(item.name) },
+    { title: "Proposte di terra", match: (item) => ["Antipasto Al Viale terra", "Formaggi misti con confetture", "Crudo e mozzarella", "Cotto e mozzarella"].includes(item.name) }
+  ],
+  primi: [
+    { title: "Proposte di pesce", match: (item) => !["Orecchiette al sugo", "Pennette all'arrabbiata", "Fusilli al sugo lucano", "Trascodi salsiccia e funghi"].includes(item.name) },
+    { title: "Proposte di terra", match: (item) => ["Orecchiette al sugo", "Pennette all'arrabbiata", "Fusilli al sugo lucano", "Trascodi salsiccia e funghi"].includes(item.name) }
+  ],
+  pizzeria: [
+    { title: "Classiche", match: (item) => !["Al Viale", "Andrea", "Alessio", "Antonio", "Daniele", "Biancaneve Cilentana", "Salsiccia e patate", "Vincenzo", "Salsiccia e friarielli", "Crudaiola"].includes(item.name) },
+    { title: "Pizze speciali", match: (item) => ["Al Viale", "Andrea", "Alessio", "Antonio", "Daniele", "Biancaneve Cilentana", "Salsiccia e patate", "Vincenzo", "Salsiccia e friarielli", "Crudaiola"].includes(item.name) }
+  ],
+  bevande: [
+    { title: "Bibite", match: (item) => ["Acqua naturale", "Acqua effervescente naturale", "Aranciata 33cl", "Coca Cola 33cl", "Coca Cola 1L", "The pesca 33cl", "The limone 33cl"].includes(item.name) },
+    { title: "Vino della casa e birre", match: (item) => !["Acqua naturale", "Acqua effervescente naturale", "Aranciata 33cl", "Coca Cola 33cl", "Coca Cola 1L", "The pesca 33cl", "The limone 33cl"].includes(item.name) }
+  ],
+  vini: [
+    { title: "Bianco", match: (item) => item.description === "Bianco." },
+    { title: "Rosato", match: (item) => item.description === "Rosato." },
+    { title: "Rosso", match: (item) => item.description === "Rosso." },
+    { title: "Bollicine", match: (item) => item.description === "Bollicine." }
+  ],
+  distillati: [
+    { title: "Digestivi", match: (item) => item.description === "Digestivo." },
+    { title: "Whisky, rum e grappe", match: (item) => ["Whisky.", "Rum.", "Grappa."].includes(item.description) },
+    { title: "Gin", match: (item) => item.description === "Gin." || item.description === "Gin tonic." }
+  ]
+};
+
 const categoryImages = {
   antipasti: "https://images.unsplash.com/photo-1546039907-7fa05f864c02?auto=format&fit=crop&w=900&q=80",
   primi: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=900&q=80",
@@ -819,6 +849,29 @@ function itemTemplate(item, index) {
   `;
 }
 
+function renderItems(items, offset = 0) {
+  return items.map((item, index) => itemTemplate(item, offset + index)).join("");
+}
+
+function renderGroupedItems(category, items) {
+  const config = groups[category];
+  if (!config) return renderItems(items);
+
+  let offset = 0;
+  return config.map((group) => {
+    const groupItems = items.filter(group.match);
+    if (!groupItems.length) return "";
+    const html = `
+      <div class="menu-group">
+        <h3>${group.title}</h3>
+        ${renderItems(groupItems, offset)}
+      </div>
+    `;
+    offset += groupItems.length;
+    return html;
+  }).join("");
+}
+
 function renderMenu() {
   menuGrid.innerHTML = order.map((category, categoryIndex) => {
     const items = menu.filter((item) => item.category === category);
@@ -836,7 +889,7 @@ function renderMenu() {
           <p class="chapter-subtitle">${subtitles[category]}</p>
         </header>
         <div class="item-list">
-          ${items.map(itemTemplate).join("")}
+          ${renderGroupedItems(category, items)}
         </div>
       </section>
     `;
