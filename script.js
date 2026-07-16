@@ -808,17 +808,20 @@ const categoryImages = {
   primi: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=900&q=80",
   mare: "https://images.unsplash.com/photo-1559737558-2f5a35f4523b?auto=format&fit=crop&w=900&q=80",
   terra: "https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=900&q=80",
-  pizzaRossa: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=80",
+  pizzaRossa: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=900&q=80",
   pizzaBianca: "https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?auto=format&fit=crop&w=900&q=80",
-  pizzaSpeciale: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=900&q=80",
+  pizzaSpeciale: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=80",
   contorni: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=900&q=80",
   dolci: "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=900&q=80",
-  bevande: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=900&q=80",
+  cocaCola: "https://upload.wikimedia.org/wikipedia/commons/a/a3/Mexican_Coke_%2811380037365%29_%28cropped%29.jpg",
+  birra: "https://www.heineken.com/media/l0mpuved/heineken-original-bottle.png?width=630&height=1200&rnd=133998961756700000",
   vinoBianco: "https://images.unsplash.com/photo-1568213816046-0ee1c42bd559?auto=format&fit=crop&w=900&q=80",
-  vinoRosato: "https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?auto=format&fit=crop&w=900&q=80",
+  vinoRosato: "https://images.unsplash.com/photo-1547595628-c61a29f496f0?auto=format&fit=crop&w=900&q=80",
   vinoRosso: "https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?auto=format&fit=crop&w=900&q=80",
-  bollicine: "https://images.unsplash.com/photo-1547595628-c61a29f496f0?auto=format&fit=crop&w=900&q=80",
-  distillati: "https://images.unsplash.com/photo-1569529465841-dfecdab7503b?auto=format&fit=crop&w=900&q=80"
+  bollicine: "https://ilsecco.com/cdn/shop/files/terra-dei-re-vulcano-800-brut-5_1200x1200.jpg?v=1762774343",
+  limoncello: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Homemade_limoncello.jpg/250px-Homemade_limoncello.jpg",
+  whisky: "https://live-jd24-backend.pantheonsite.io/sites/default/files/2026-04/Old%20No.%207%20DOM.png",
+  gin: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Bombay_Gin.jpg/250px-Bombay_Gin.jpg"
 };
 
 const menuSections = [
@@ -833,15 +836,15 @@ const menuSections = [
   { key: "pizze-speciali", title: "Pizze speciali", subtitle: "Le proposte Al Viale", category: "pizzeria", group: groups.pizzeria[2], image: categoryImages.pizzaSpeciale },
   { key: "contorni", title: "Contorni", subtitle: subtitles.contorni, category: "contorni", image: categoryImages.contorni },
   { key: "dolci", title: "Dolci", subtitle: subtitles.dolci, category: "dolci", image: categoryImages.dolci },
-  { key: "bibite", title: "Bibite", subtitle: "Acqua e soft drink", category: "bevande", group: groups.bevande[0], image: categoryImages.bevande },
-  { key: "birre-vino-casa", title: "Birre e vino casa", subtitle: "Spina, bottiglia e vino sfuso", category: "bevande", group: groups.bevande[1], image: categoryImages.bevande },
+  { key: "bibite", title: "Bibite", subtitle: "Acqua e soft drink", category: "bevande", group: groups.bevande[0], image: categoryImages.cocaCola },
+  { key: "birre-vino-casa", title: "Birre e vino casa", subtitle: "Spina, bottiglia e vino sfuso", category: "bevande", group: groups.bevande[1], image: categoryImages.birra },
   { key: "vini-bianchi", title: "Bianchi", subtitle: "I nostri vini", category: "vini", group: groups.vini[0], image: categoryImages.vinoBianco },
   { key: "vini-rosati", title: "Rosati", subtitle: "I nostri vini", category: "vini", group: groups.vini[1], image: categoryImages.vinoRosato },
   { key: "vini-rossi", title: "Rossi", subtitle: "I nostri vini", category: "vini", group: groups.vini[2], image: categoryImages.vinoRosso },
   { key: "bollicine", title: "Bollicine", subtitle: "Metodo classico e champagne", category: "vini", group: groups.vini[3], image: categoryImages.bollicine },
-  { key: "digestivi", title: "Digestivi", subtitle: "Amari e limoncello", category: "distillati", group: groups.distillati[0], image: categoryImages.distillati },
-  { key: "grappe-rum", title: "Whisky, rum e grappe", subtitle: "Spirits", category: "distillati", group: groups.distillati[1], image: categoryImages.distillati },
-  { key: "gin", title: "Gin", subtitle: "Gin e gin tonic", category: "distillati", group: groups.distillati[2], image: categoryImages.distillati }
+  { key: "digestivi", title: "Digestivi", subtitle: "Amari e limoncello", category: "distillati", group: groups.distillati[0], image: categoryImages.limoncello },
+  { key: "grappe-rum", title: "Whisky, rum e grappe", subtitle: "Spirits", category: "distillati", group: groups.distillati[1], image: categoryImages.whisky },
+  { key: "gin", title: "Gin", subtitle: "Gin e gin tonic", category: "distillati", group: groups.distillati[2], image: categoryImages.gin }
 ];
 
 function formatPrice(price) {
