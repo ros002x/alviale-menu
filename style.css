@@ -468,6 +468,18 @@ h2 em {
   font: 600 clamp(19px, 1.6vw, 22px) / 1.14 "Fraunces";
 }
 
+.chapter-pizzeria .item-name {
+  font: 600 clamp(21px, 2vw, 28px) / 1.08 "Fraunces";
+}
+
+.chapter-pizzeria .menu-item {
+  padding: 9px 0;
+}
+
+.chapter-pizzeria .item-description {
+  margin-top: 4px;
+}
+
 .chapter-pizzeria .item-description,
 .chapter-vini .item-description,
 .chapter-distillati .item-description,
