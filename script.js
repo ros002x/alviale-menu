@@ -818,7 +818,7 @@ const groups = {
   ],
   bevande: [
     { title: "Bibite", match: (item) => ["Acqua naturale", "Acqua minerale", "Acqua effervescente naturale", "Aranciata 33cl", "Coca Cola 33cl", "Coca Cola 1L", "The pesca 33cl", "The limone 33cl"].includes(item.name) },
-    { title: "Vino della casa e birre", match: (item) => !["Acqua naturale", "Acqua minerale", "Acqua effervescente naturale", "Aranciata 33cl", "Coca Cola 33cl", "Coca Cola 1L", "The pesca 33cl", "The limone 33cl"].includes(item.name) }
+    { title: "Birre e vino della casa", match: (item) => !["Acqua naturale", "Acqua minerale", "Acqua effervescente naturale", "Aranciata 33cl", "Coca Cola 33cl", "Coca Cola 1L", "The pesca 33cl", "The limone 33cl"].includes(item.name) }
   ],
   vini: [
     { title: "Bianco", match: (item) => item.description === "Bianco." },
@@ -869,7 +869,7 @@ const menuSections = [
   { key: "contorni", title: "Contorni", subtitle: subtitles.contorni, category: "contorni", image: categoryImages.contorni },
   { key: "dolci", title: "Dolci", subtitle: subtitles.dolci, category: "dolci", image: categoryImages.dolci },
   { key: "bibite", title: "Bibite", subtitle: "Acqua e soft drink", category: "bevande", group: groups.bevande[0], image: categoryImages.cocaCola },
-  { key: "birre-vino-casa", title: "Birre e vino casa", subtitle: "Spina, bottiglia e vino sfuso", category: "bevande", group: groups.bevande[1], image: categoryImages.birra },
+  { key: "birre-vino-casa", title: "Birre e vino della casa", subtitle: "Spina, bottiglia e vino sfuso", category: "bevande", group: groups.bevande[1], image: categoryImages.birra },
   { key: "vini-bianchi", title: "Bianchi", subtitle: "I nostri vini", category: "vini", group: groups.vini[0], image: categoryImages.vinoBianco },
   { key: "vini-rosati", title: "Rosati", subtitle: "I nostri vini", category: "vini", group: groups.vini[1], image: categoryImages.vinoRosato },
   { key: "vini-rossi", title: "Rossi", subtitle: "I nostri vini", category: "vini", group: groups.vini[2], image: categoryImages.vinoRosso },
