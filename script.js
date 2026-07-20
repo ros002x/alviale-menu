@@ -21,7 +21,7 @@ const menu = [
   {
     category: "antipasti",
     name: "Impepata di cozze",
-    description: "Cozze al pepe.",
+    description: "",
     price: "10"
   },
   {
@@ -39,13 +39,13 @@ const menu = [
   {
     category: "antipasti",
     name: "Tartare di tonno",
-    description: "Tartare di tonno.",
+    description: "",
     price: "15"
   },
   {
     category: "antipasti",
     name: "Tartare di gambero viola",
-    description: "Tartare di gambero viola.",
+    description: "",
     price: "22"
   },
   {
@@ -63,25 +63,25 @@ const menu = [
   {
     category: "antipasti",
     name: "Formaggi misti con confetture",
-    description: "Selezione di formaggi misti con confetture.",
+    description: "",
     price: "12"
   },
   {
     category: "antipasti",
     name: "Crudo e mozzarella",
-    description: "Prosciutto crudo e mozzarella.",
+    description: "",
     price: "12"
   },
   {
     category: "antipasti",
     name: "Cotto e mozzarella",
-    description: "Prosciutto cotto e mozzarella.",
+    description: "",
     price: "8"
   },
   {
     category: "primi",
     name: "Spaghetti alle cozze",
-    description: "Spaghetti con cozze.",
+    description: "",
     price: "10"
   },
   {
@@ -93,7 +93,7 @@ const menu = [
   {
     category: "primi",
     name: "Spaghetti alle vongole",
-    description: "Spaghetti alle vongole.",
+    description: "",
     price: "15",
     featured: true
   },
@@ -130,7 +130,7 @@ const menu = [
   {
     category: "primi",
     name: "Pacchero all'astice",
-    description: "Pacchero all'astice.",
+    description: "",
     price: "30"
   },
   {
@@ -160,13 +160,13 @@ const menu = [
   {
     category: "mare",
     name: "Frittura di calamari",
-    description: "Frittura di calamari.",
+    description: "",
     price: "17"
   },
   {
     category: "mare",
     name: "Frittura di calamari e gamberi",
-    description: "Frittura di calamari e gamberi.",
+    description: "",
     price: "16"
   },
   {
@@ -324,7 +324,7 @@ const menu = [
   {
     category: "pizzeria",
     name: "Tartufata",
-    description: "Mozzarella di bufala, pomodorino fresco, porcini e crema al tartufo.",
+    description: "Mozzarella di bufala, pomodorino fresco, porcini, acciughe, olio di oliva e tartufo.",
     price: "9,00"
   },
   {
@@ -403,7 +403,7 @@ const menu = [
   {
     category: "pizzeria",
     name: "Salsiccia e friarielli",
-    description: "Mozzarella, salsiccia, friarielli e provola affumicata.",
+    description: "Mozzarella, salsiccia, friarielli, provola affumicata e concasse.",
     price: "10,00"
   },
   {
@@ -415,25 +415,25 @@ const menu = [
   {
     category: "contorni",
     name: "Insalata verde",
-    description: "Insalata verde.",
+    description: "",
     price: "4"
   },
   {
     category: "contorni",
     name: "Insalata mista",
-    description: "Lattuga, pomodori, carote e mais.",
+    description: "",
     price: "5"
   },
   {
     category: "contorni",
     name: "Patatine fritte",
-    description: "Patatine fritte.",
+    description: "",
     price: "4"
   },
   {
     category: "contorni",
     name: "Verdure grigliate",
-    description: "Verdure grigliate.",
+    description: "",
     price: "6"
   },
   {
@@ -469,7 +469,7 @@ const menu = [
   },
   {
     category: "bevande",
-    name: "Acqua naturale",
+    name: "Acqua minerale",
     description: "Bottiglia.",
     price: "2,00"
   },
@@ -853,7 +853,25 @@ function formatPrice(price) {
   return price === "--" ? "s.q." : `<small>&euro;</small>${price}`;
 }
 
+const hiddenDescriptions = new Set([
+  "Bianco.",
+  "Rosato.",
+  "Rosso.",
+  "Bollicine.",
+  "Digestivo.",
+  "Whisky.",
+  "Rum.",
+  "Grappa.",
+  "Gin.",
+  "Gin tonic."
+]);
+
+function visibleDescription(item) {
+  return hiddenDescriptions.has(item.description) ? "" : item.description;
+}
+
 function itemTemplate(item) {
+  const description = visibleDescription(item);
   return `
     <article class="menu-item${item.featured ? " featured" : ""}">
       <div class="item-main">
@@ -861,7 +879,7 @@ function itemTemplate(item) {
           <h3 class="item-name">${item.name}</h3>
           ${item.featured ? '<span class="badge">Consigliato</span>' : ""}
         </div>
-        <p class="item-description">${item.description}</p>
+        ${description ? `<p class="item-description">${description}</p>` : ""}
       </div>
       <span class="price">${formatPrice(item.price)}</span>
     </article>
