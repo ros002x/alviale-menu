@@ -409,7 +409,7 @@ const menu = [
   {
     category: "pizzeria",
     name: "Crudaiola",
-    description: "Mozzarella, pesto di pistacchio, pomodorini e scaglie di grana.",
+    description: "Mozzarella, pomodorini e scaglie di grana.",
     price: "10,00"
   },
   {
@@ -787,8 +787,8 @@ const groups = {
     { title: "Pizze speciali", match: (item) => ["Al Viale", "Andrea", "Alessio", "Antonio", "Daniele", "Biancaneve Cilentana", "Salsiccia e patate", "Vincenzo", "Salsiccia e friarielli", "Crudaiola"].includes(item.name) }
   ],
   bevande: [
-    { title: "Bibite", match: (item) => ["Acqua naturale", "Acqua effervescente naturale", "Aranciata 33cl", "Coca Cola 33cl", "Coca Cola 1L", "The pesca 33cl", "The limone 33cl"].includes(item.name) },
-    { title: "Vino della casa e birre", match: (item) => !["Acqua naturale", "Acqua effervescente naturale", "Aranciata 33cl", "Coca Cola 33cl", "Coca Cola 1L", "The pesca 33cl", "The limone 33cl"].includes(item.name) }
+    { title: "Bibite", match: (item) => ["Acqua minerale", "Acqua effervescente naturale", "Aranciata 33cl", "Coca Cola 33cl", "Coca Cola 1L", "The pesca 33cl", "The limone 33cl"].includes(item.name) },
+    { title: "Vino della casa e birre", match: (item) => !["Acqua minerale", "Acqua effervescente naturale", "Aranciata 33cl", "Coca Cola 33cl", "Coca Cola 1L", "The pesca 33cl", "The limone 33cl"].includes(item.name) }
   ],
   vini: [
     { title: "Bianco", match: (item) => item.description === "Bianco." },
@@ -863,7 +863,12 @@ const hiddenDescriptions = new Set([
   "Rum.",
   "Grappa.",
   "Gin.",
-  "Gin tonic."
+  "Gin tonic.",
+  "Bottiglia.",
+  "Lattina.",
+  "Vino della casa.",
+  "Birra alla spina.",
+  "Birra in bottiglia."
 ]);
 
 function visibleDescription(item) {
