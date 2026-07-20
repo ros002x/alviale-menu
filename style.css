@@ -539,6 +539,15 @@ h2 em {
     font-size: clamp(29px, 10vw, 38px);
   }
 
+  .chapter-birre-vino-casa .chapter-title {
+    font-size: clamp(23px, 7.2vw, 32px);
+    white-space: nowrap;
+  }
+
+  .chapter-birre-vino-casa .chapter-title::after {
+    display: none;
+  }
+
   .menu-item {
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 7px;
