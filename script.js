@@ -409,7 +409,7 @@ const menu = [
   {
     category: "pizzeria",
     name: "Crudaiola",
-    description: "Mozzarella, pomodorini e scaglie di grana.",
+    description: "Mozzarella, crudo di Parma, pomodorini e scaglie di grana.",
     price: "10,00"
   },
   {
