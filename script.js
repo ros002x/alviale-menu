@@ -469,6 +469,12 @@ const menu = [
   },
   {
     category: "bevande",
+    name: "Acqua naturale",
+    description: "Bottiglia.",
+    price: "2,00"
+  },
+  {
+    category: "bevande",
     name: "Acqua minerale",
     description: "Bottiglia.",
     price: "2,00"
@@ -754,6 +760,30 @@ const menu = [
     name: "Gin Tonic Bombay",
     description: "Gin tonic.",
     price: "6,00"
+  },
+  {
+    category: "distillati",
+    name: "Gin Garage",
+    description: "Gin.",
+    price: "3,50"
+  },
+  {
+    category: "distillati",
+    name: "Gin Tonic Garage",
+    description: "Gin tonic.",
+    price: "10,00"
+  },
+  {
+    category: "distillati",
+    name: "Gin Portofino",
+    description: "Gin.",
+    price: "8,00"
+  },
+  {
+    category: "distillati",
+    name: "Gin Tonic Portofino",
+    description: "Gin tonic.",
+    price: "12,00"
   }
 ];
 
@@ -787,8 +817,8 @@ const groups = {
     { title: "Pizze speciali", match: (item) => ["Al Viale", "Andrea", "Alessio", "Antonio", "Daniele", "Biancaneve Cilentana", "Salsiccia e patate", "Vincenzo", "Salsiccia e friarielli", "Crudaiola"].includes(item.name) }
   ],
   bevande: [
-    { title: "Bibite", match: (item) => ["Acqua minerale", "Acqua effervescente naturale", "Aranciata 33cl", "Coca Cola 33cl", "Coca Cola 1L", "The pesca 33cl", "The limone 33cl"].includes(item.name) },
-    { title: "Vino della casa e birre", match: (item) => !["Acqua minerale", "Acqua effervescente naturale", "Aranciata 33cl", "Coca Cola 33cl", "Coca Cola 1L", "The pesca 33cl", "The limone 33cl"].includes(item.name) }
+    { title: "Bibite", match: (item) => ["Acqua naturale", "Acqua minerale", "Acqua effervescente naturale", "Aranciata 33cl", "Coca Cola 33cl", "Coca Cola 1L", "The pesca 33cl", "The limone 33cl"].includes(item.name) },
+    { title: "Vino della casa e birre", match: (item) => !["Acqua naturale", "Acqua minerale", "Acqua effervescente naturale", "Aranciata 33cl", "Coca Cola 33cl", "Coca Cola 1L", "The pesca 33cl", "The limone 33cl"].includes(item.name) }
   ],
   vini: [
     { title: "Bianco", match: (item) => item.description === "Bianco." },
